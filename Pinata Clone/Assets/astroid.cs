@@ -31,6 +31,5 @@ public class astroid : MonoBehaviour
         // at the Y location of the empty object Spawnposition , and in a range of Random.range(-10,10) from the positon of the empty gameobject Spawnposition 
         // the object is rotated arround the Z axe in a random angle (0,360)
         GameObject a = Instantiate(asteriodPrefabs, new Vector3(Random.Range(-10, 10), SpawningPosition.transform.localPosition.y), Quaternion.Euler(0, 0, Random.Range(0,360)));
-        a.tag = "Asteroid";
     }
 }
