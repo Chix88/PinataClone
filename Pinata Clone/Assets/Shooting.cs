@@ -18,8 +18,8 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        asteroidPosition = GameObject.FindGameObjectWithTag("Asteroid").transform;
-        Debug.Log(asteroidPosition.position);
+        
+        
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -29,7 +29,18 @@ public class Shooting : MonoBehaviour
             objectWithForce = Instantiate(Weapon, position, rotation);
 
             Rigidbody2D objectRigidBody = objectWithForce.GetComponent<Rigidbody2D>();
-            objectRigidBody.AddForce(asteroidPosition.position *100);
+
+            if (GameObject.FindGameObjectWithTag("Asteroid") != null) //check if there is a target with a tag "asteroid" to shhot at
+            {
+                asteroidPosition = GameObject.FindGameObjectWithTag("Asteroid").transform;
+                objectRigidBody.AddForce(asteroidPosition.position * 100f);
+
+            }
+            else
+            {
+                objectRigidBody.AddForce(new Vector2(2, 2) * 500f);
+            }
+           
 
         }
     }
