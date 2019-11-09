@@ -65,6 +65,8 @@
     <Compile Include="Assets\astroid.cs" />
     <Compile Include="Assets\CharacterController2D.cs" />
     <Compile Include="Assets\characterMovement.cs" />
+    <Compile Include="Assets\ColisionIgnore.cs" />
+    <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\Shooting.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/chix8/Unity/PinataClone/Pinata Clone/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

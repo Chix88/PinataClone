@@ -5,7 +5,7 @@ using UnityEngine;
 public class astroid : MonoBehaviour
 {
     public GameObject asteriodPrefabs;
-    public float Timer = 2.0f;
+    public float SpawningSpeed;
     public GameObject SpawningPosition;
     // Start is called before the first frame update
     void Start()
@@ -17,11 +17,11 @@ public class astroid : MonoBehaviour
     void Update()
     {
         //the timer is decreasing every frame by a Time.DeltaTime
-        Timer -= Time.deltaTime;
-        if (Timer <= 0f)
+        SpawningSpeed -= Time.deltaTime;
+        if (SpawningSpeed <= 0f)
         {
             SpawnEnemy();
-            Timer = 2f;
+            SpawningSpeed = 0.5f;
         }
 
     }
